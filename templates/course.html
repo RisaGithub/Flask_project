@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block title %}
+<title>{{ course.name }}</title>
+{% endblock %}
+
+{% block body %}
+<h1>Topics:</h1>
+{% for item in course.topics %}
+    <div>
+        <a href="/courses/{{ course.id }}/topics/{{ item.id }}" class="topic_btn">
+            {{ item.name }}
+        </a>
+    </div>
+{% endfor %}
+{% endblock %}

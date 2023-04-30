@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block title %}
+<title>home</title>
+{% endblock %}
+
+{% block body %}
+<h1>{{user_name}}</h1>
+<h1>{{user_email}}</h1>
+
+<h1>Your courses:</h1>
+{% for item in courses %}
+    <h2>{{item}}</h2>
+
+<h1>Other courses:</h1>
+{% for item in courses %}
+    <h2>{{item}}</h2>
+{% endfor %}
+{% endblock %}

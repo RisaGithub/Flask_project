@@ -1,0 +1,12 @@
+{% extends "base_admin.html" %}
+
+{% block title %}
+<title>data</title>
+{% endblock %}
+
+{% block body %}
+<h1>USERS</h1>
+{% for item in all_accounts %}
+    <p>{{item.nickname}}</p> <p>{{item.user.email}}</p>
+{% endfor %}
+{% endblock %}

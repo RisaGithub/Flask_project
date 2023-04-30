@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block title %}
+<title>home</title>
+{% endblock %}
+
+{% block body %}
+<h1>Courses:</h1>
+{% for item in all_courses %}
+    <div>
+        <form action="/courses/{{ item.id }}" class="course_btn">
+            <button class="course_btn">{{item.name}}</button>
+        </form>
+    </div>
+{% endfor %}
+
+{% endblock %}

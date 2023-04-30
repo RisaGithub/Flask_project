@@ -1,0 +1,23 @@
+{% extends "base_admin.html" %}
+
+{% block title %}
+<title>admin_courses</title>
+{% endblock %}
+
+{% block body %}
+
+<h1>All courses:</h1>
+<div>
+    <a href="/admin/all_courses/add_course" class="btn">Add course</a>
+</div>
+{% for item in all_courses %}
+    <div>
+        <a href="/admin/all_courses/{{ item.id }}" class="btn">{{item.name}}</a>
+    </div>
+    <div>
+        <a href="/admin/all_courses/{{ item.id }}/edit_course" class="btn">Edit</a>
+        <a href="/admin/all_courses/{{ item.id }}/delete_course" class="btn">Delete</a>
+    </div>
+{% endfor %}
+
+{% endblock %}

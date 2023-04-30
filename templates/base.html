@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    {% block title %}{% endblock %}
+    <link href="/static/css/base.css" rel="stylesheet">
+
+</head>
+
+<body>
+    <header>
+        <h2 class="logo">Programming</h2>
+        <nav class="navigation">
+            <a href="/home">Home</a>
+            <a href="/courses">Courses</a>
+            <a href="/register">Register</a>
+            <form class="my_form" action="/login">
+                <button class="btn_login">Login</button>
+            </form>
+        </nav>
+    </header>
+{% block body %}{% endblock %}
+</body>
+
+</html>
